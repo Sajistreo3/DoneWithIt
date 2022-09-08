@@ -4,17 +4,17 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import colors from '../config/colors';
 
 
-export default function AppButton({value}) {
+function AppButton({value, onpress}) {
   return (
-    <View styles={styles.button}>
-        <Text style={styles.text}>This is also working</Text>
-    </View>
-  )
+    <TouchableOpacity style={styles.button} onPress={onpress}>
+        <Text style={styles.text}>{value}</Text>
+    </TouchableOpacity>
+  );
 }
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: 'black',
+    backgroundColor: colors.primary,
     borderRadius: 25,
     justifyContent: 'center',
     alignItems: 'center',
@@ -29,3 +29,4 @@ const styles = StyleSheet.create({
   }
 });
 
+export default AppButton;
