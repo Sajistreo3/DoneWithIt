@@ -8,7 +8,7 @@ import { View, StyleSheet, Text } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container} >
-      <AppButton value='click me' onpress={() => console.log("Button CLicked")}/>
+      <AppButton value='Login' onPress={() => console.log("Clicked")}/>
     </View>
   );
 }
