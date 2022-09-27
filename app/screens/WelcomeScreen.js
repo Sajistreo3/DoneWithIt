@@ -14,6 +14,7 @@ import {
   Button,
   ImageBackground,
 } from 'react-native';
+import AppButton from '../components/AppButton';
 
 import colors from '../config/colors';
 
@@ -28,12 +29,10 @@ function WelcomeScreen(props) {
         <Image style={styles.logo} source={require('../assets/logo-red.png')} />
         <Text>Sell what you dont need</Text>
       </View>
-      <View
-        style={styles.loginButton}
-      ></View>
-      <View
-        style={styles.registerButton}
-      ></View>
+      <View style={styles.buttonContainer}>
+        <AppButton value='Login' onPress={() => console.log("Login Pressed")} />
+        <AppButton color='secondary' value='Register' onPress={() => console.log("Register Pressed")} />
+      </View>
     </ImageBackground>
   );
 }
@@ -43,6 +42,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-end',
     alignItems: 'center',
+  },
+  buttonContainer: {
+    width: "100%",
+    padding: 10,
   },
   loginButton: {
     width: '100%',
