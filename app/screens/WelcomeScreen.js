@@ -22,12 +22,13 @@ import colors from '../config/colors';
 function WelcomeScreen(props) {
   return (
     <ImageBackground
+      blurRadius={10}
       style={styles.background}
       source={require('../assets/background.jpg')}
     >
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require('../assets/logo-red.png')} />
-        <Text>Sell what you dont need</Text>
+        <Text style={styles.tagline}>Sell what you dont need</Text>
       </View>
       <View style={styles.buttonContainer}>
         <AppButton value='Login' onPress={() => console.log("Login Pressed")} />
@@ -65,6 +66,11 @@ const styles = StyleSheet.create({
   logo: {
     width: 100,
     height: 100,
+  },
+  tagline: {
+    fontSize: 25,
+    fontWeight: '600',
+    paddingVertical: 20,
   },
 })
 
