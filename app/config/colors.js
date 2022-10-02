@@ -4,4 +4,7 @@ export default {
     black: '#000',
     white: '#fff',
     mediumGray: '#6e6969',
+    lightGray: '#e6e1e1',
+    danger: '#ff5252',
+    dangerPress: '#b03535',
 }

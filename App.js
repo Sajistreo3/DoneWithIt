@@ -6,13 +6,14 @@ import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
 import AppButton from './app/components/AppButton';
 import Card from './app/components/Card';
 import { View, StyleSheet, Text } from 'react-native';
+import MessagesScreen from './app/screens/MessagesScreen';
 
 export default function App() {
   return (
     // <View style={styles.container} >
     //   <AppButton value='Login' onPress={() => console.log("Button Pressed")} />
     // </View>
-    <ViewImageScreen />
+    <MessagesScreen />
 
 
 
