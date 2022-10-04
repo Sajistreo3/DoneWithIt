@@ -7,28 +7,22 @@ import AppButton from './app/components/AppButton';
 import Card from './app/components/Card';
 import { View, StyleSheet, Text } from 'react-native';
 import MessagesScreen from './app/screens/MessagesScreen';
+import SafeScreen from './app/components/SafeScreen';
+import Icon from './app/components/Icon';
+import ListItem from './app/components/ListItem';
+import AccountScreen from './app/screens/AccountScreen';
+import ListingScreen from './app/screens/ListingScreen';
+
 
 export default function App() {
   return (
     // <View style={styles.container} >
     //   <AppButton value='Login' onPress={() => console.log("Button Pressed")} />
     // </View>
-    <MessagesScreen />
+    // <MessagesScreen />
+    // <AccountScreen />
+    <ListingScreen />
 
-
-
-    // <View style={{
-    //   backgroundColor: '#f8f4f4',
-    //   padding: 20,
-    //   paddingTop: 100,
-    // }}>
-    //   <Card
-    //       title="Red Jacket for sale"
-    //       subTitle="$100"
-    //       image={require('./app/assets/jacket.png')}
-    //   />
-      
-    // </View>
   );
 }
 
