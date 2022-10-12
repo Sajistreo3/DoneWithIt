@@ -1,44 +1,29 @@
 import React, { useState } from 'react';
-import TestScreen from './app/screens/testScreen';
-import ViewImageScreen from './app/screens/ViewImageScreen';
-import WelcomeScreen from './app/screens/WelcomeScreen';
-import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
-import AppButton from './app/components/AppButton';
-import Card from './app/components/Card';
 import { View, StyleSheet, Text, TextInput, Switch } from 'react-native';
-import MessagesScreen from './app/screens/MessagesScreen';
+import AppPicker from './app/components/AppPicker';
+import PickerItem from './app/components/PickerItem';
 import SafeScreen from './app/components/SafeScreen';
-import Icon from './app/components/Icon';
-import ListItem from './app/components/ListItem';
-import AccountScreen from './app/screens/AccountScreen';
-import ListingScreen from './app/screens/ListingScreen';
-import AppTextInput from './app/components/AppTextInput';
+import LoginScreen from './app/screens/LoginScreen';
+
 
 
 export default function App() {
-  const [isNew, setIsNew] = useState(false);
+  const categories = [
+    { label: 'furniture', id: 1 },
+    { label: 'toys', id: 2 },
+    { label: 'cloths', id: 3 },
+  ];
+  
+
 
   return (
-
-    // <MessagesScreen />
-    // <AccountScreen />
-    // <ListingScreen />
-
     <SafeScreen>
-      {/* <Switch value={isNew} onValueChange={newValue => setIsNew(newValue)} /> */}
-      {/* <TextInput 
-        maxLength={5}
-        secureTextEntry
-        onChangeText={text => setFirstName(text)}
-        placeholder='First Name' 
-        style={{
-          borderBottomColor: '#ccc',
-          borderBottomWidth: 1,
-        }}
-      /> */}
+      {/* <LoginScreen /> */}
+      <AppPicker icon='apps' placeholder='categories' items={categories}/>
     </SafeScreen>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
